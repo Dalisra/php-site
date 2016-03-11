@@ -1,0 +1,5 @@
+RewriteEngine on
+#RewriteRule ^styrepanel$ webroot_admin/ [L]
+#RewriteRule ^styrepanel(.*) webroot_admin/$1 [L]
+RewriteRule ^$ webroot/ [L]
+RewriteRule ^(.*)$ webroot/$1 [L]

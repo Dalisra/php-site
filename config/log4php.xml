@@ -1,0 +1,19 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+
+    <appender name="debugAppender" class="LoggerAppenderRollingFile">
+        <param name="file" value="../../logs/debug.log" />
+        <param name="append" value="true" />
+        <param name="threshold" value="DEBUG" />
+        <param name="MaxBackupIndex" value="10" />
+        <param name="MaxFileSize" value="500kB" />
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date %-5level %logger %msg%n"/>
+        </layout>
+    </appender>
+
+    <logger name="com.dalisra" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="debugAppender" />
+    </logger>
+
+</configuration>
