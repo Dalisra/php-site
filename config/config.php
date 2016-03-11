@@ -37,8 +37,8 @@ $conf['prod']['path']['view'] = $conf['prod']['path']['full'] . 'view' . DS;
 $conf['devel']['path']['view'] = $conf['devel']['path']['full'] . 'view' . DS;
 
 /* Smarty configuration */
-$conf['prod']['path']['smarty'] = $conf['prod']['path']['lib'] . 'Smarty' . DS . 'Smarty-3.1.14' . DS;
-$conf['devel']['path']['smarty'] = $conf['devel']['path']['lib'] . 'Smarty' . DS . 'Smarty-3.1.14' . DS;
+$conf['prod']['path']['smarty'] = $conf['prod']['path']['lib'] . 'Smarty' . DS . 'Smarty-3.1.29' . DS;
+$conf['devel']['path']['smarty'] = $conf['devel']['path']['lib'] . 'Smarty' . DS . 'Smarty-3.1.29' . DS;
 
 $conf['prod']['smarty']['templates_c'] = $conf['prod']['path']['lib'] . 'Smarty' . DS . 'templates_c' . DS;
 $conf['devel']['smarty']['templates_c'] = $conf['devel']['path']['lib'] . 'Smarty' . DS . 'templates_c' . DS;
