@@ -1,7 +1,7 @@
 <configuration xmlns="http://logging.apache.org/log4php/">
 
     <appender name="debugAppender" class="LoggerAppenderRollingFile">
-        <param name="file" value="../../logs/debug.log" />
+        <param name="file" value="../logs/debug.log" />
         <param name="append" value="true" />
         <param name="threshold" value="DEBUG" />
         <param name="MaxBackupIndex" value="10" />
