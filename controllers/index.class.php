@@ -8,7 +8,7 @@ class Index_Controller extends APP_Controller{
 
     //Overriding standard method with custom action.
     function process(){
-        APP::$smarty->display('pages/index.tpl');
+        return array("Greeting"=>"Hello", "Message"=>"Hello world! \"Welcome\"");
     }
 
 }

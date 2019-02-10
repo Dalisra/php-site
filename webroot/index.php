@@ -9,13 +9,15 @@ require CORE . DS . 'lib' . DS . 'init.class.php';
 $init = new Init();
 $init->initialize();
 
-APP::$request->processRequest();
+header('Content-Type: application/json');
+$data = APP::$request->processRequest();
 
 //at the end we show time used to process the message
 if (APP::$conf['showTimer']) {
-    echo "<!--Request processed in: " . $GLOBALS['timer']->stop() . "-->";
+    $time = $GLOBALS['timer']->stop();
+    $data["timer"] = array("message"=>"Request processed in: " . $time, "time"=>$time);
 }else{
     APP::$log->debug("Request processed in: " . $GLOBALS['timer']->stop());
     // Apache logs: take a look at that: http://logging.apache.org/log4php/download.html
-
 }
+echo json_encode($data);
